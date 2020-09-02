@@ -1,28 +1,8 @@
-# What is this repository for?
-
-This repository will help you install [Mediawiki](https://www.mediawiki.org) on AWS in fully automated fashion using Terraforma, AWS cli and Ansible.
-
-Terraform is responsible for provisioning infrastructure on AWS while Ansible helps install Mediawiki.
-
-## Diagrams - Infra
-![AWS Infra Setup](static/mediawiki.jpeg)
-
-## Diagram - Execution
-1. Traffic arrives on load balancer and get routed to web servers in public subnet
-2. Web servers can only make calls to DB server in private subnet
-
-## Useful links
-1. Media Wiki installation steps [link](https://www.mediawiki.org/wiki/Manual:Running_MediaWiki_on_Debian_or_Ubuntu)
-2. Enabling keyless authentication [link](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
-3. Enabling passwordless sudo [link](https://code-maven.com/enable-ansible-passwordless-sudo)
-
 ## How to Execute Terrform Scripts
 
-## Preparing Master Machine
-Please refer to file - [master-setup-script.sh](master-setup-script.sh)
+### init
 ```
-chmod 700 master-setup-script.sh
-./master-setup-script.sh
+terrform init
 ```
 
 ### Plan
